@@ -1,0 +1,224 @@
+:root{
+    --dark-color:#19283f;
+    --green-color:#33d1cc;
+    --red-color:#ff3150;
+    --yellow-color:#ffc400;
+    --section-color:#eff7fa;
+}
+body{
+    font-family: "Roboto", "sans-serif";
+    height: fit-content;
+}
+.main-btn{
+    background-color: var(--red-color);
+    border: none;
+    color: var(--yellow-color);
+    padding: 0.5rem 1rem;
+}
+.main-btn:hover{
+    color: black;
+}
+.main-title::after {
+    content: '';
+    height: 2px;
+    width: 120px;
+    background-color: var(--green-color);
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* navbar */
+.navbar{
+    background-color: var(--dark-color);
+}
+.navbar .navbar-nav .nav-link{
+    color: white;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover{
+    color: var(--green-color);
+}
+.navbar .search{
+    border-left:2px solid var(--green-color);
+}
+.navbar  .search svg{
+    color: var(--green-color);
+}
+.navbar .navbar-toggler{
+    color: white;
+    font-size: 25px;
+    border-color: white;
+}
+.navbar .navbar-toggler:focus{
+    box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"]{
+    border-color: #33d1cc;
+}
+/* landing */
+
+.landing{
+    background-color: var(--dark-color);
+    min-height: calc(100vh - 72px);
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+.landing h1{
+    font-weight: 300;
+    font-size: 70px;
+}
+.landing p{
+    color: #777;
+}.landing .main-btn{
+    padding: 0.5rem 1.5rem;
+}
+/* features */
+.features .icon-holder{
+    height: 200px;
+}
+.feautres .icon-holder svg{
+    left: 50%;
+    transform: translateX(-50%);
+}
+.features .icon-holder .number{
+    font-size: 8rem;
+    color: var(--section-color);
+}
+
+.features .icon-holder .icon{
+    color: var(--green-color);
+}
+
+.features .feat h4{
+    color: var(--yellow-color);
+}
+
+/* our work */
+.our-work{
+    background-color: var(--section-color);
+}
+.our-work ul .active{
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+}
+.our-work ul li{
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.our-work ul li:not(.active):hover{
+    color: var(--red-color);
+}
+.our-work .box{
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+}
+.our-work .box::before{
+    content: attr(data-work);
+    position: absolute;
+    background-color: rgb(51 209 204 /60%);
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    transition: 0.3s;
+    font-size: 1.5rem;
+    transform: translateX(calc(-100% - 5px));
+}
+.our-work .box:hover::before{
+    transform: translateX(0);
+}
+/* stuff */
+.stuff .description {
+    max-width: 400px;
+}
+.stuff .btnorder{
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+}
+.title{
+    font-size: 40px;
+    font-style: italic;
+    font-weight: bold;
+}
+/* team */
+.team{
+    background-color: var(--section-color);
+}
+.team h2{
+    color: var(--yellow-color);
+}
+.team .thisparag{
+    max-width: 500px;
+    margin: auto;
+}
+.team .box h4{
+    background-color: var(--green-color);
+}
+/* project */
+.project {
+    background-color: var(--dark-color);
+}
+/* suscribe */
+.subscribe{
+    background-color: var(--yellow-color);
+}
+.subscribe input[type="text"]{
+    border: none;
+    border-bottom: 1px solid white;
+}
+.subscribe input[type="text"]:focus{
+    outline: none;
+    caret-color: var(--dark-color);
+    
+}
+.subscribe ::placeholder{
+    color: white;
+}
+.subscribe a{
+    background-color: var(--dark-color);
+    color: var(--red-color);
+}
+
+.subscribe a:hover{
+    color: white;
+}
+/* footer */
+.footer{
+    background-color: var(--dark-color);
+}
+.footer .copyright a{
+    color: var(--red-color);
+    text-decoration: none;
+    display: block;
+}
+.footer .copyright .comp > span{
+    color:var(--yellow-color);
+    cursor: pointer;
+}
+
+.footer .links h5{
+    letter-spacing: 3px;
+}
+.footer .links ul li{
+    padding-top: 15px;
+}
+.footer .facebook{
+    background-color: #1877f2;
+}
+.footer .twitter{
+    background-color: #1da1f2;
+}
+.footer .youtube{
+    background-color: #ff0000;
+}
+.footer .github{
+    background-color: #333;
+}
